@@ -48,6 +48,15 @@ Future<int> fetchNumber(int input) async{
   return input * 2;
 }
 */
+class Study2{ 
+  String name;
+  String study;
+  Study2(this.name,this.study);
+  int get length => study.length;
+  display(){
+    print("Name: $name, Study: $study");
+  }
+}
 void main(){
   List<Study> studies = [
     Study("Alice", "Flutter"),
