@@ -1,3 +1,6 @@
+import 'dart:io';
+
+/*
 class Study{
   String name;
   String study;
@@ -10,6 +13,7 @@ Future<String> fetchGreeting() async{
   await Future.delayed(Duration(seconds:2));
   return "Hello";
 }
+*/
 /*
 Future<int> fetchNumber() async{
   await Future.delayed(Duration(seconds:2));
@@ -48,16 +52,28 @@ Future<int> fetchNumber(int input) async{
   return input * 2;
 }
 */
+/*
 class Study2{ 
   String name;
   String study;
   Study2(this.name,this.study);
   int get length => study.length;
+
+  void getStudyInfo() {
+    print("Name: $name, Study: $study");
+  }
   display(){
     print("Name: $name, Study: $study");
   }
 }
+*/
 void main(){
+  ({String name, int age, String study}) userInfo() {
+    return(name :"Alice", age: 25, study: "Flutter");
+  }
+  final (:name, :age, study:subject) = userInfo();
+  print("Name: $name, Age: $age, Study: $subject");
+  /*
   List<Study> studies = [
     Study("Alice", "Flutter"),
     Study("Bob", "Dart"),
@@ -70,6 +86,7 @@ void main(){
   greetingFutre.then((greeting) {
     print("$greeting World!");
   });
+  */
   // Future<int> numberFuture = fetchNumber();
   // numberFuture.then((result){
     // print(result*2);
